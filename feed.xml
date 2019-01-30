@@ -2,45 +2,45 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">Blog Title</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2019-01-30T18:05:43-05:00</updated>
-<id>http://localhost:4000/</id>
+<link rel="self" type="application/atom+xml" href="https://xwing3.github.io/personal-website/feed.xml" />
+<link rel="alternate" type="text/html" href="https://xwing3.github.io/personal-website" />
+<updated>2019-01-30T18:25:16-05:00</updated>
+<id>https://xwing3.github.io/personal-website/</id>
 <author>
-  <name>Your name</name>
-  <uri>http://localhost:4000/</uri>
+  <name>Florian Madar</name>
+  <uri>https://xwing3.github.io/personal-website/</uri>
   <email>you@email.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[New Portfolio Post Title]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/posts/new-portfolio-post-title/" />
-  <id>http://localhost:4000/posts/new-portfolio-post-title</id>
+ <link rel="alternate" type="text/html" href="https://xwing3.github.io/personal-website/posts/new-portfolio-post-title/" />
+  <id>https://xwing3.github.io/personal-website/posts/new-portfolio-post-title</id>
   <published>2019-01-30T18:02:14-05:00</published>
   <updated>2019-01-30T18:02:14-05:00</updated>
   <author>
-    <name>Your name</name>
-    <uri>http://localhost:4000</uri>
+    <name>Florian Madar</name>
+    <uri>https://xwing3.github.io/personal-website</uri>
     <email>you@email.com</email>
   </author>
   <content type="html">
     
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/posts/new-portfolio-post-title/&quot;&gt;New Portfolio Post Title&lt;/a&gt; was originally published by Your name at &lt;a href=&quot;http://localhost:4000&quot;&gt;Blog Title&lt;/a&gt; on January 30, 2019.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://xwing3.github.io/personal-website/posts/new-portfolio-post-title/&quot;&gt;New Portfolio Post Title&lt;/a&gt; was originally published by Florian Madar at &lt;a href=&quot;https://xwing3.github.io/personal-website&quot;&gt;Blog Title&lt;/a&gt; on January 30, 2019.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Welcome to Jekyll!]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" />
-  <id>http://localhost:4000/jekyll/update/welcome-to-jekyll</id>
+ <link rel="alternate" type="text/html" href="https://xwing3.github.io/personal-website/jekyll/update/welcome-to-jekyll/" />
+  <id>https://xwing3.github.io/personal-website/jekyll/update/welcome-to-jekyll</id>
   <published>2019-01-30T16:07:11-05:00</published>
   <updated>2019-01-30T16:07:11-05:00</updated>
   <author>
-    <name>Your name</name>
-    <uri>http://localhost:4000</uri>
+    <name>Florian Madar</name>
+    <uri>https://xwing3.github.io/personal-website</uri>
     <email>you@email.com</email>
   </author>
   <content type="html">
@@ -59,21 +59,21 @@
 &lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/jekyll/update/welcome-to-jekyll/&quot;&gt;Welcome to Jekyll!&lt;/a&gt; was originally published by Your name at &lt;a href=&quot;http://localhost:4000&quot;&gt;Blog Title&lt;/a&gt; on January 30, 2019.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://xwing3.github.io/personal-website/jekyll/update/welcome-to-jekyll/&quot;&gt;Welcome to Jekyll!&lt;/a&gt; was originally published by Florian Madar at &lt;a href=&quot;https://xwing3.github.io/personal-website&quot;&gt;Blog Title&lt;/a&gt; on January 30, 2019.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Sample Post]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/intro/sample-post/" />
-  <id>http://localhost:4000/intro/sample-post</id>
+ <link rel="alternate" type="text/html" href="https://xwing3.github.io/personal-website/intro/sample-post/" />
+  <id>https://xwing3.github.io/personal-website/intro/sample-post</id>
   <updated>2016-12-02T00:00:00-00:00</updated>
   <published>2016-12-02T00:00:00-05:00</published>
   
   <author>
-    <name>Your name</name>
-    <uri>http://localhost:4000</uri>
+    <name>Florian Madar</name>
+    <uri>https://xwing3.github.io/personal-website</uri>
     <email>you@email.com</email>
   </author>
   <content type="html">
@@ -95,7 +95,7 @@
 
 &lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
 
-&lt;p class=&quot;image-right&quot;&gt;&lt;img src=&quot;http://localhost:4000/images/3953273590_704e3899d5_m.jpg&quot; alt=&quot;Smithsonian Image&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;image-right&quot;&gt;&lt;img src=&quot;https://xwing3.github.io/personal-website/images/3953273590_704e3899d5_m.jpg&quot; alt=&quot;Smithsonian Image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H&lt;sub&gt;2&lt;/sub&gt;O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times &lt;cite&gt;(That’s a citation)&lt;/cite&gt;. &lt;u&gt;Underline&lt;/u&gt;. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;
 
@@ -215,21 +215,21 @@
 
 &lt;p&gt;The image must be in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/images&lt;/code&gt; folder.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/intro/sample-post/&quot;&gt;Sample Post&lt;/a&gt; was originally published by Your name at &lt;a href=&quot;http://localhost:4000&quot;&gt;Blog Title&lt;/a&gt; on December 02, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://xwing3.github.io/personal-website/intro/sample-post/&quot;&gt;Sample Post&lt;/a&gt; was originally published by Florian Madar at &lt;a href=&quot;https://xwing3.github.io/personal-website&quot;&gt;Blog Title&lt;/a&gt; on December 02, 2016.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Syntax Highlighting Post]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/intro/code-highlighting-post/" />
-  <id>http://localhost:4000/intro/code-highlighting-post</id>
+ <link rel="alternate" type="text/html" href="https://xwing3.github.io/personal-website/intro/code-highlighting-post/" />
+  <id>https://xwing3.github.io/personal-website/intro/code-highlighting-post</id>
   <updated>2016-12-01T00:00:00-00:00</updated>
   <published>2016-12-01T00:00:00-05:00</published>
   
   <author>
-    <name>Your name</name>
-    <uri>http://localhost:4000</uri>
+    <name>Florian Madar</name>
+    <uri>https://xwing3.github.io/personal-website</uri>
     <email>you@email.com</email>
   </author>
   <content type="html">
@@ -292,20 +292,20 @@
   &lt;/ol&gt;
 &lt;/div&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/intro/code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by Your name at &lt;a href=&quot;http://localhost:4000&quot;&gt;Blog Title&lt;/a&gt; on December 01, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://xwing3.github.io/personal-website/intro/code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by Florian Madar at &lt;a href=&quot;https://xwing3.github.io/personal-website&quot;&gt;Blog Title&lt;/a&gt; on December 01, 2016.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Dark Post]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/dark-post/" />
-  <id>http://localhost:4000/dark-post</id>
+ <link rel="alternate" type="text/html" href="https://xwing3.github.io/personal-website/dark-post/" />
+  <id>https://xwing3.github.io/personal-website/dark-post</id>
   <published>2016-11-30T00:00:00-05:00</published>
   <updated>2016-11-30T00:00:00-05:00</updated>
   <author>
-    <name>Your name</name>
-    <uri>http://localhost:4000</uri>
+    <name>Florian Madar</name>
+    <uri>https://xwing3.github.io/personal-website</uri>
     <email>you@email.com</email>
   </author>
   <content type="html">
@@ -315,20 +315,20 @@
 
 &lt;p&gt;on your post. This theme adds a dark background with a white panel to show your content.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/dark-post/&quot;&gt;Dark Post&lt;/a&gt; was originally published by Your name at &lt;a href=&quot;http://localhost:4000&quot;&gt;Blog Title&lt;/a&gt; on November 30, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://xwing3.github.io/personal-website/dark-post/&quot;&gt;Dark Post&lt;/a&gt; was originally published by Florian Madar at &lt;a href=&quot;https://xwing3.github.io/personal-website&quot;&gt;Blog Title&lt;/a&gt; on November 30, 2016.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Post with a Background Image]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/image/background-image/" />
-  <id>http://localhost:4000/image/background-image</id>
+ <link rel="alternate" type="text/html" href="https://xwing3.github.io/personal-website/image/background-image/" />
+  <id>https://xwing3.github.io/personal-website/image/background-image</id>
   <published>2016-11-29T00:00:00-05:00</published>
   <updated>2016-11-29T00:00:00-05:00</updated>
   <author>
-    <name>Your name</name>
-    <uri>http://localhost:4000</uri>
+    <name>Florian Madar</name>
+    <uri>https://xwing3.github.io/personal-website</uri>
     <email>you@email.com</email>
   </author>
   <content type="html">
@@ -343,7 +343,7 @@
 
 &lt;div xmlns:cc=&quot;http://creativecommons.org/ns#&quot; xmlns:dct=&quot;http://purl.org/dc/terms/&quot; about=&quot;http://subtlepatterns.com&quot; class=&quot;notice&quot;&gt;Background images from &lt;span property=&quot;dct:title&quot;&gt;Subtle Patterns&lt;/span&gt; (&lt;a rel=&quot;cc:attributionURL&quot; property=&quot;cc:attributionName&quot; href=&quot;http://subtlepatterns.com&quot;&gt;Subtle Patterns&lt;/a&gt;) / &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-sa/3.0/&quot;&gt;CC BY-SA 3.0&lt;/a&gt;&lt;/div&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/image/background-image/&quot;&gt;Post with a Background Image&lt;/a&gt; was originally published by Your name at &lt;a href=&quot;http://localhost:4000&quot;&gt;Blog Title&lt;/a&gt; on November 29, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://xwing3.github.io/personal-website/image/background-image/&quot;&gt;Post with a Background Image&lt;/a&gt; was originally published by Florian Madar at &lt;a href=&quot;https://xwing3.github.io/personal-website&quot;&gt;Blog Title&lt;/a&gt; on November 29, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -351,31 +351,31 @@
 <entry>
   <title type="html"><![CDATA[Sample Link Post]]></title>
  <link rel="alternate" type="text/html" href="http://aronbordin.com" />
-  <id>http://localhost:4000/intro/sample-link-post</id>
+  <id>https://xwing3.github.io/personal-website/intro/sample-link-post</id>
   <published>2016-11-28T00:00:00-05:00</published>
   <updated>2016-11-28T00:00:00-05:00</updated>
   <author>
-    <name>Your name</name>
-    <uri>http://localhost:4000</uri>
+    <name>Florian Madar</name>
+    <uri>https://xwing3.github.io/personal-website</uri>
     <email>you@email.com</email>
   </author>
   <content type="html">
     &lt;p&gt;This theme supports &lt;strong&gt;link posts&lt;/strong&gt;, made famous by John Gruber. To use, just add &lt;code class=&quot;highlighter-rouge&quot;&gt;link: http://url-you-want-linked&lt;/code&gt; to the post’s YAML front matter and you’re done.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/intro/sample-link-post/&quot;&gt;Sample Link Post&lt;/a&gt; was originally published by Your name at &lt;a href=&quot;http://localhost:4000&quot;&gt;Blog Title&lt;/a&gt; on November 28, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://xwing3.github.io/personal-website/intro/sample-link-post/&quot;&gt;Sample Link Post&lt;/a&gt; was originally published by Florian Madar at &lt;a href=&quot;https://xwing3.github.io/personal-website&quot;&gt;Blog Title&lt;/a&gt; on November 28, 2016.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[A Post with a Video]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/intro/video-post/" />
-  <id>http://localhost:4000/intro/video-post</id>
+ <link rel="alternate" type="text/html" href="https://xwing3.github.io/personal-website/intro/video-post/" />
+  <id>https://xwing3.github.io/personal-website/intro/video-post</id>
   <published>2016-11-27T00:00:00-05:00</published>
   <updated>2016-11-27T00:00:00-05:00</updated>
   <author>
-    <name>Your name</name>
-    <uri>http://localhost:4000</uri>
+    <name>Florian Madar</name>
+    <uri>https://xwing3.github.io/personal-website</uri>
     <email>you@email.com</email>
   </author>
   <content type="html">
@@ -390,20 +390,20 @@
 {:/nomarkdown}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/intro/video-post/&quot;&gt;A Post with a Video&lt;/a&gt; was originally published by Your name at &lt;a href=&quot;http://localhost:4000&quot;&gt;Blog Title&lt;/a&gt; on November 27, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://xwing3.github.io/personal-website/intro/video-post/&quot;&gt;A Post with a Video&lt;/a&gt; was originally published by Florian Madar at &lt;a href=&quot;https://xwing3.github.io/personal-website&quot;&gt;Blog Title&lt;/a&gt; on November 27, 2016.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[A Post with Images]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/sample/intro/sample-post-images/" />
-  <id>http://localhost:4000/sample/intro/sample-post-images</id>
+ <link rel="alternate" type="text/html" href="https://xwing3.github.io/personal-website/sample/intro/sample-post-images/" />
+  <id>https://xwing3.github.io/personal-website/sample/intro/sample-post-images</id>
   <published>2016-11-26T00:00:00-05:00</published>
   <updated>2016-11-26T00:00:00-05:00</updated>
   <author>
-    <name>Your name</name>
-    <uri>http://localhost:4000</uri>
+    <name>Florian Madar</name>
+    <uri>https://xwing3.github.io/personal-website</uri>
     <email>you@email.com</email>
   </author>
   <content type="html">
@@ -505,7 +505,7 @@ Available values: [1..3].&lt;/li&gt;
 &lt;/figure&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/sample/intro/sample-post-images/&quot;&gt;A Post with Images&lt;/a&gt; was originally published by Your name at &lt;a href=&quot;http://localhost:4000&quot;&gt;Blog Title&lt;/a&gt; on November 26, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://xwing3.github.io/personal-website/sample/intro/sample-post-images/&quot;&gt;A Post with Images&lt;/a&gt; was originally published by Florian Madar at &lt;a href=&quot;https://xwing3.github.io/personal-website&quot;&gt;Blog Title&lt;/a&gt; on November 26, 2016.&lt;/p&gt;
   </content>
 </entry>
 
