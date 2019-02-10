@@ -101,6 +101,7 @@ h6 {
 
 .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     padding-top: 65px;
+    padding-bottom: 65px;
     display: block;
     max-width: 100%;
     height: auto;
