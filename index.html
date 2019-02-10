@@ -182,25 +182,21 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <h2 class="section-heading">Keep in touch!</h2>
-                        <div class="lead"><div class="col-lg-6">
-    <ul class="list-inline banner-social-buttons">
-        
-        <li>
-            <a href="https://twitter.com/xwing34" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">twitter</span></a>
-        </li>
-        <p></p>
-        
-        <li>
-            <a href="https://github.com/xwing3" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">github</span></a>
-        </li>
-        <p></p>
-        
-        <li>
-            <a href="https://www.linkedin.com/in/florian-madar-52002841" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">linkedin</span></a>
-        </li>
-        <p></p>
-        
-    </ul>
+                        <div class="lead"><div class="container">  
+  <form id="contact" action="https://formspree.io/" method="POST">
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" name="name" required="" autofocus="" />
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" name="email" tabindex="2" required="" />
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." name="message" tabindex="5" required=""></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
 </div>
 </div>
                     </div>
