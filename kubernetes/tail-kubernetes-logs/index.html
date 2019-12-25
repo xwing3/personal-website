@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Welcome - Florian Madar - IT cloud infrastructure engineer that dabbles in Devops</title>
-<meta name="description" content="Hi and like the title suggest, welcome to my personal website, blog, voice on the Internet, etc.">
+<!-- begin _includes/seo.html --><title>Various ways to tail Kubernetes pod logs - Florian Madar - IT cloud infrastructure engineer that dabbles in Devops</title>
+<meta name="description" content="I’ve been using Kubernetes as the main container orchestration software for almost two years and during that period I’ve tried different ways to tail container logs, some of which were even third party cloud logging services like Google Logging, but still the fastest way is using a CLI tool and thankfully there are a couple to choose from.KubectlPlatforms supported: Linux, MacOS, WindowsKubectl remains the default go to tool for tailing containers logs.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Florian Madar - IT cloud infrastructure engineer that dabbles in Devops">
-<meta property="og:title" content="Welcome">
-<meta property="og:url" content="https://www.florianmadar.com/first%20step/first-post/">
+<meta property="og:title" content="Various ways to tail Kubernetes pod logs">
+<meta property="og:url" content="https://www.florianmadar.com/kubernetes/tail-kubernetes-logs/">
 
 
-  <meta property="og:description" content="Hi and like the title suggest, welcome to my personal website, blog, voice on the Internet, etc.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-12-23T00:00:00+02:00">
+  <meta property="og:description" content="I’ve been using Kubernetes as the main container orchestration software for almost two years and during that period I’ve tried different ways to tail container logs, some of which were even third party cloud logging services like Google Logging, but still the fastest way is using a CLI tool and thankfully there are a couple to choose from.KubectlPlatforms supported: Linux, MacOS, WindowsKubectl remains the default go to tool for tailing containers logs.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-12-25T00:00:00+02:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://www.florianmadar.com/first%20step/first-post/">
+
+<link rel="canonical" href="https://www.florianmadar.com/kubernetes/tail-kubernetes-logs/">
 
 
 
@@ -180,7 +180,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#first-step" itemprop="item"><span itemprop="name">First step</span></a>
+          <a href="/categories/#kubernetes" itemprop="item"><span itemprop="name">Kubernetes</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -188,7 +188,7 @@
     
       
       
-        <li class="current">Welcome</li>
+        <li class="current">Various ways to tail Kubernetes pod logs</li>
       
     
   </ol>
@@ -316,15 +316,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Welcome">
-    <meta itemprop="description" content="Hi and like the title suggest, welcome to my personal website, blog, voice on the Internet, etc.">
-    <meta itemprop="datePublished" content="2019-12-23T00:00:00+02:00">
+    <meta itemprop="headline" content="Various ways to tail Kubernetes pod logs">
+    <meta itemprop="description" content="I’ve been using Kubernetes as the main container orchestration software for almost two years and during that period I’ve tried different ways to tail container logs, some of which were even third party cloud logging services like Google Logging, but still the fastest way is using a CLI tool and thankfully there are a couple to choose from.KubectlPlatforms supported: Linux, MacOS, WindowsKubectl remains the default go to tool for tailing containers logs.">
+    <meta itemprop="datePublished" content="2019-12-25T00:00:00+02:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Welcome
+          <h1 id="page-title" class="page__title" itemprop="headline">Various ways to tail Kubernetes pod logs
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -332,7 +332,7 @@
 
 
 
-  less than 1 minute read
+  3 minute read
 
 </p>
           
@@ -341,7 +341,42 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Hi and like the title suggest, welcome to my personal website, blog, voice on the Internet, etc.</p>
+        <p>I’ve been using Kubernetes as the main container orchestration software for almost two years and during that period I’ve tried different ways to tail container logs, some of which were even third party cloud logging services like Google Logging, but still the fastest way is using a CLI tool and thankfully there are a couple to choose from.</p>
+<h2 id="kubectl">Kubectl</h2>
+<h3 id="platforms-supported-linux-macos-windows">Platforms supported: Linux, MacOS, Windows</h3>
+<p>Kubectl remains the default go to tool for tailing containers logs.</p>
+
+<p>Usage:<br />
+  <code class="highlighter-rouge">kubectl logs [-f] [-p] (POD | TYPE/NAME) [-c CONTAINER]</code><br />
+Using it with <code class="highlighter-rouge">-f</code> will allow you to stream the logs, <code class="highlighter-rouge">-p</code> is for printing the logs of the previous pod/container instance and <code class="highlighter-rouge">-c</code> is used to specify the container name if you have a pod in which resides multiple containers.<br />
+More about this robust <code class="highlighter-rouge">kubectl</code> command can be found at <a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs">Kubernetes homepage</a>.</p>
+
+<h2 id="stern">Stern</h2>
+<h3 id="platforms-supported-linux-macos">Platforms supported: Linux, MacOS</h3>
+<p>My all time favorite although I started using it really late, <code class="highlighter-rouge">stern</code> is a tool made by <a href="https://www.oracle.com/corporate/acquisitions/wercker/">Wercker</a> which recently were acquired by Oracle and it allows you to tail multiple pods/containers. The results are colored coded to improve readability and debugging and it supports regular expressions use in query so you can easily filter K8s pods/containers without the need to specify the exact id.</p>
+
+<p>Usage:<br />
+ <code class="highlighter-rouge">stern pod-query [flags]</code><br />
+For the whole list of flags and other features you can checkout their <a href="https://github.com/wercker/stern">Github page</a>.</p>
+
+<h2 id="kubetail">Kubetail</h2>
+<h3 id="platforms-supported-linux-macos-1">Platforms supported: Linux, MacOS</h3>
+<p>If the need arises to tail multiple logs from multiple pods Kubetail is an option that you surely can consider. It’s a robust bash script that does <code class="highlighter-rouge">kubectl logs -f</code> but for multiple pods.<br />
+A few  noteworthy features that it supports:</p>
+<ul>
+  <li>Regular expressions: <code class="highlighter-rouge">kubetail "^app1|.*my-demo.*" --regex</code></li>
+  <li>Tail multiple pods: <code class="highlighter-rouge">kubetail app1,app2</code></li>
+  <li>Tail multiple specific containers: <code class="highlighter-rouge">kubetail app2 -c container1 -c container2</code></li>
+</ul>
+
+<p>Check their <a href="https://github.com/johanhaleby/kubetail">Github page</a>  for more.</p>
+
+<h2 id="kail">Kail</h2>
+<h3 id="platforms-supported-linux-macos-windows-1">Platforms supported: Linux, MacOS, Windows</h3>
+<p>Kail is another worthy mention, it does the same job as stern and kubetail. Their <a href="https://github.com/atombender/ktail">Github page</a> contains detailed information about the features it supports.</p>
+
+<h2 id="endpost">EndPost</h2>
+<p>Basically these are some of the tools out there that are used to stream pod logs. I mostly go with Kubectl but started recently to use Stern as it offers more flexibility and features.</p>
 
         
       </section>
@@ -362,19 +397,31 @@
     
       
       
-      <a href="/tags/#bienvenue" class="page__taxonomy-item" rel="tag">bienvenue</a><span class="sep">, </span>
+      <a href="/tags/#kail" class="page__taxonomy-item" rel="tag">kail</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#bineativenit" class="page__taxonomy-item" rel="tag">bineativenit</a><span class="sep">, </span>
+      <a href="/tags/#kubectl" class="page__taxonomy-item" rel="tag">kubectl</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#welcome" class="page__taxonomy-item" rel="tag">welcome</a><span class="sep">, </span>
+      <a href="/tags/#kubernetes" class="page__taxonomy-item" rel="tag">Kubernetes</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#willkommen" class="page__taxonomy-item" rel="tag">willkommen</a>
+      <a href="/tags/#kubetail" class="page__taxonomy-item" rel="tag">kubetail</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#logs" class="page__taxonomy-item" rel="tag">logs</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#logs" class="page__taxonomy-item" rel="tag">logs</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#stern" class="page__taxonomy-item" rel="tag">stern</a>
     
     </span>
   </p>
@@ -395,14 +442,14 @@
     
       
       
-      <a href="/categories/#first-step" class="page__taxonomy-item" rel="tag">First step</a>
+      <a href="/categories/#kubernetes" class="page__taxonomy-item" rel="tag">Kubernetes</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-12-23T00:00:00+02:00">December 23, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-12-25T00:00:00+02:00">December 25, 2019</time></p>
         
       </footer>
 
@@ -411,22 +458,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Welcome%20https%3A%2F%2Fwww.florianmadar.com%2Ffirst%2520step%2Ffirst-post%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Various+ways+to+tail+Kubernetes+pod+logs%20https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Ftail-kubernetes-logs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.florianmadar.com%2Ffirst%2520step%2Ffirst-post%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Ftail-kubernetes-logs%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.florianmadar.com%2Ffirst%2520step%2Ffirst-post%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Ftail-kubernetes-logs%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">Previous</a>
+      <a href="/first%20step/first-post/" class="pagination--pager" title="Welcome
+">Previous</a>
     
     
-      <a href="/kubernetes/tail-kubernetes-logs/" class="pagination--pager" title="Various ways to tail Kubernetes pod logs
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -450,7 +497,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/kubernetes/tail-kubernetes-logs/" rel="permalink">Various ways to tail Kubernetes pod logs
+        <a href="/first%20step/first-post/" rel="permalink">Welcome
 </a>
       
     </h2>
@@ -460,11 +507,12 @@
 
 
 
-  3 minute read
+  less than 1 minute read
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">I’ve been using Kubernetes as the main container orchestration software for almost two years and during that period I’ve tried different ways to tail contain...</p>
+    <p class="archive__item-excerpt" itemprop="description">Hi and like the title suggest, welcome to my personal website, blog, voice on the Internet, etc.
+</p>
   </article>
 </div>
 
