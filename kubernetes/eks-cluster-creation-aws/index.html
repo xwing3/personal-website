@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Easily create an EKS cluster in AWS - Florian Madar - IT cloud infrastructure engineer that dabbles in Devops</title>
+<!-- begin _includes/seo.html --><title>Easily create an EKS cluster in AWS using eksctl - Florian Madar - IT cloud infrastructure engineer that dabbles in Devops</title>
 <meta name="description" content="For me, not a while ago, Kubernetes cluster administration and creation in AWS was synonymous with kops as their cloud build Kubernetes service (EKS) was lacking features and was a handful when it came to creating and administrating a cluster. Since then things took a turn for the best, new tools were developed and made creation and administration of an EKS clusters more pleasant.Such a tool is eksctl created and maintained by Weaveworks. Eksctl is a CLI tool built in GO that helps with creation of AWS EKS clusters.You can easily create a cluster using eksctl with a simple command line instruction where you can specify the name, Kubernetes version, AWS region, the name of the worker nodegroup, EC2 machine node-type, number of nodes from the get go, a minimum number and a maximum number of nodes for autoscalling purposes and if you want the node group to be managed and provisioned by AWS EKS which you certainly want to:">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Florian Madar - IT cloud infrastructure engineer that dabbles in Devops">
-<meta property="og:title" content="Easily create an EKS cluster in AWS">
-<meta property="og:url" content="https://www.florianmadar.com/kubernetes/eks-cluster-aws/">
+<meta property="og:title" content="Easily create an EKS cluster in AWS using eksctl">
+<meta property="og:url" content="https://www.florianmadar.com/kubernetes/eks-cluster-creation-aws/">
 
 
   <meta property="og:description" content="For me, not a while ago, Kubernetes cluster administration and creation in AWS was synonymous with kops as their cloud build Kubernetes service (EKS) was lacking features and was a handful when it came to creating and administrating a cluster. Since then things took a turn for the best, new tools were developed and made creation and administration of an EKS clusters more pleasant.Such a tool is eksctl created and maintained by Weaveworks. Eksctl is a CLI tool built in GO that helps with creation of AWS EKS clusters.You can easily create a cluster using eksctl with a simple command line instruction where you can specify the name, Kubernetes version, AWS region, the name of the worker nodegroup, EC2 machine node-type, number of nodes from the get go, a minimum number and a maximum number of nodes for autoscalling purposes and if you want the node group to be managed and provisioned by AWS EKS which you certainly want to:">
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="https://www.florianmadar.com/kubernetes/eks-cluster-aws/">
+<link rel="canonical" href="https://www.florianmadar.com/kubernetes/eks-cluster-creation-aws/">
 
 
 
@@ -188,7 +188,7 @@
     
       
       
-        <li class="current">Easily create an EKS cluster in AWS</li>
+        <li class="current">Easily create an EKS cluster in AWS using eksctl</li>
       
     
   </ol>
@@ -316,7 +316,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Easily create an EKS cluster in AWS">
+    <meta itemprop="headline" content="Easily create an EKS cluster in AWS using eksctl">
     <meta itemprop="description" content="For me, not a while ago, Kubernetes cluster administration and creation in AWS was synonymous with kops as their cloud build Kubernetes service (EKS) was lacking features and was a handful when it came to creating and administrating a cluster. Since then things took a turn for the best, new tools were developed and made creation and administration of an EKS clusters more pleasant.Such a tool is eksctl created and maintained by Weaveworks. Eksctl is a CLI tool built in GO that helps with creation of AWS EKS clusters.You can easily create a cluster using eksctl with a simple command line instruction where you can specify the name, Kubernetes version, AWS region, the name of the worker nodegroup, EC2 machine node-type, number of nodes from the get go, a minimum number and a maximum number of nodes for autoscalling purposes and if you want the node group to be managed and provisioned by AWS EKS which you certainly want to:">
     <meta itemprop="datePublished" content="2019-12-26T00:00:00+02:00">
     
@@ -324,7 +324,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Easily create an EKS cluster in AWS
+          <h1 id="page-title" class="page__title" itemprop="headline">Easily create an EKS cluster in AWS using eksctl
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -456,11 +456,11 @@ You can easily create a cluster using <code class="highlighter-rouge">eksctl</co
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Easily+create+an+EKS+cluster+in+AWS%20https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Feks-cluster-aws%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Easily+create+an+EKS+cluster+in+AWS+using+eksctl%20https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Feks-cluster-creation-aws%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Feks-cluster-aws%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Feks-cluster-creation-aws%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Feks-cluster-aws%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Feks-cluster-creation-aws%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
