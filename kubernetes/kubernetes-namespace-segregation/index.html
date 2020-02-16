@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Easily create an EKS cluster in AWS using eksctl - Florian Madar - IT cloud infrastructure engineer that dabbles in Devops</title>
-<meta name="description" content="For me, not a while ago, Kubernetes cluster administration and creation in AWS was synonymous with kops as their cloud build Kubernetes service (EKS) was lacking features and was a handful when it came to creating and administrating a cluster. Since then things took a turn for the best, new tools were developed and made creation and administration of an EKS clusters more pleasant.Such a tool is eksctl created and maintained by Weaveworks. Eksctl is a CLI tool built in GO that helps with creation of AWS EKS clusters.You can easily create a cluster using eksctl with a simple command line instruction where you can specify the name, Kubernetes version, AWS region, the name of the worker nodegroup, EC2 machine node-type, number of nodes from the get go, a minimum number and a maximum number of nodes for autoscalling purposes and if you want the node group to be managed and provisioned by AWS EKS which you certainly want to:">
+<!-- begin _includes/seo.html --><title>Deploying with Kubernetes - Namespace segregation - Florian Madar - IT cloud infrastructure engineer that dabbles in Devops</title>
+<meta name="description" content="In Kubernetes, namespaces are a powerful concept that offers a way to partition a single Kubernetes cluster into multiple virtual clusters or, in our case, multiple environments. Kubernetes namespace segregation is used for a variety of reasons of which includes:  divide cluster resources between multiple users  provide a scope to names - names need to be unique inside the scope of a namespace but not across namespaces  restrict access to different environments using RBAC (Role base access control)/namespace  partition development landscapes">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Florian Madar - IT cloud infrastructure engineer that dabbles in Devops">
-<meta property="og:title" content="Easily create an EKS cluster in AWS using eksctl">
-<meta property="og:url" content="https://www.florianmadar.com/kubernetes/eks-cluster-creation-aws/">
+<meta property="og:title" content="Deploying with Kubernetes - Namespace segregation">
+<meta property="og:url" content="https://www.florianmadar.com/kubernetes/kubernetes-namespace-segregation/">
 
 
-  <meta property="og:description" content="For me, not a while ago, Kubernetes cluster administration and creation in AWS was synonymous with kops as their cloud build Kubernetes service (EKS) was lacking features and was a handful when it came to creating and administrating a cluster. Since then things took a turn for the best, new tools were developed and made creation and administration of an EKS clusters more pleasant.Such a tool is eksctl created and maintained by Weaveworks. Eksctl is a CLI tool built in GO that helps with creation of AWS EKS clusters.You can easily create a cluster using eksctl with a simple command line instruction where you can specify the name, Kubernetes version, AWS region, the name of the worker nodegroup, EC2 machine node-type, number of nodes from the get go, a minimum number and a maximum number of nodes for autoscalling purposes and if you want the node group to be managed and provisioned by AWS EKS which you certainly want to:">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-12-26T00:00:00+02:00">
+  <meta property="og:description" content="In Kubernetes, namespaces are a powerful concept that offers a way to partition a single Kubernetes cluster into multiple virtual clusters or, in our case, multiple environments. Kubernetes namespace segregation is used for a variety of reasons of which includes:  divide cluster resources between multiple users  provide a scope to names - names need to be unique inside the scope of a namespace but not across namespaces  restrict access to different environments using RBAC (Role base access control)/namespace  partition development landscapes">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2020-01-07T00:00:00+02:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://www.florianmadar.com/kubernetes/eks-cluster-creation-aws/">
+
+<link rel="canonical" href="https://www.florianmadar.com/kubernetes/kubernetes-namespace-segregation/">
 
 
 
@@ -188,7 +188,7 @@
     
       
       
-        <li class="current">Easily create an EKS cluster in AWS using eksctl</li>
+        <li class="current">Deploying with Kubernetes - Namespace segregation</li>
       
     
   </ol>
@@ -316,15 +316,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Easily create an EKS cluster in AWS using eksctl">
-    <meta itemprop="description" content="For me, not a while ago, Kubernetes cluster administration and creation in AWS was synonymous with kops as their cloud build Kubernetes service (EKS) was lacking features and was a handful when it came to creating and administrating a cluster. Since then things took a turn for the best, new tools were developed and made creation and administration of an EKS clusters more pleasant.Such a tool is eksctl created and maintained by Weaveworks. Eksctl is a CLI tool built in GO that helps with creation of AWS EKS clusters.You can easily create a cluster using eksctl with a simple command line instruction where you can specify the name, Kubernetes version, AWS region, the name of the worker nodegroup, EC2 machine node-type, number of nodes from the get go, a minimum number and a maximum number of nodes for autoscalling purposes and if you want the node group to be managed and provisioned by AWS EKS which you certainly want to:">
-    <meta itemprop="datePublished" content="2019-12-26T00:00:00+02:00">
+    <meta itemprop="headline" content="Deploying with Kubernetes - Namespace segregation">
+    <meta itemprop="description" content="In Kubernetes, namespaces are a powerful concept that offers a way to partition a single Kubernetes cluster into multiple virtual clusters or, in our case, multiple environments. Kubernetes namespace segregation is used for a variety of reasons of which includes:  divide cluster resources between multiple users  provide a scope to names - names need to be unique inside the scope of a namespace but not across namespaces  restrict access to different environments using RBAC (Role base access control)/namespace  partition development landscapes">
+    <meta itemprop="datePublished" content="2020-01-07T00:00:00+02:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Easily create an EKS cluster in AWS using eksctl
+          <h1 id="page-title" class="page__title" itemprop="headline">Deploying with Kubernetes - Namespace segregation
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -332,7 +332,7 @@
 
 
 
-  3 minute read
+  2 minute read
 
 </p>
           
@@ -341,52 +341,22 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>For me, not a while ago, Kubernetes cluster administration and creation in AWS was synonymous with <a href="https://github.com/kubernetes/kops">kops</a> as their cloud build Kubernetes service (EKS) was lacking features and was a handful when it came to creating and administrating a cluster. Since then things took a turn for the best, new tools were developed and made creation and administration of an EKS clusters more pleasant.<br />
-Such a tool is <code class="highlighter-rouge">eksctl</code> created and maintained by <a href="https://www.weave.works/">Weaveworks</a>. <code class="highlighter-rouge">Eksctl</code> is a CLI tool built in <code class="highlighter-rouge">GO</code> that helps with creation of AWS EKS clusters.<br />
-You can easily create a cluster using <code class="highlighter-rouge">eksctl</code> with a simple command line instruction where you can specify the <code class="highlighter-rouge">name</code>, Kubernetes <code class="highlighter-rouge">version</code>, AWS <code class="highlighter-rouge">region</code>, the name of the worker <code class="highlighter-rouge">nodegroup</code>, EC2 machine <code class="highlighter-rouge">node-type</code>, number of <code class="highlighter-rouge">nodes</code> from the get go, a minimum number and a maximum number of nodes for autoscalling purposes and if you want the node group to be <code class="highlighter-rouge">managed</code> and provisioned by AWS EKS which you certainly want to:</p>
+        <p>In Kubernetes, namespaces are a powerful concept that offers a way to partition a single Kubernetes cluster into multiple virtual clusters or, in our case, multiple environments. 
+Kubernetes namespace segregation is used for a variety of reasons of which includes:</p>
+<ul>
+  <li>divide cluster resources between multiple users</li>
+  <li>provide a scope to names - names need to be unique inside the scope of a namespace but not across namespaces</li>
+  <li>restrict access to different environments using RBAC (Role base access control)/namespace</li>
+  <li>partition development landscapes</li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">    <span class="s">eksctl create cluster \</span>
-    <span class="s">--name prod \</span>
-    <span class="s">--version 1.14 \</span>
-    <span class="s">--region eu-central-1 \</span>
-    <span class="s">--nodegroup-name prod_node_group \</span>
-    <span class="s">--node-type t3.large \</span>
-    <span class="s">--nodes 2 \</span>
-    <span class="s">--nodes-min 1 \</span>
-    <span class="s">--nodes-max 3 \</span>
-    <span class="s">--managed</span></code></pre></figure>
+<h2 id="partition-development-landscape">Partition development landscape</h2>
+<p>This post focuses on partition development landscape. One of the advantages that Kubernetes provides is the ability for software development teams to partition their development pipelines into standalone units to manage various environments easier and better than traditional deployment strategies. 
+For most applications, you have dev, QA, staging, and production environments. The resulting structure is ideally suited to Kubernetes namespaces. Each environment or stage in the pipeline becomes a unique namespace.</p>
 
-<p>If you are an adept of IAC (Infrastructure as code) you can in depth customize your cluster by using a yaml config file:</p>
-
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">eksctl.io/v1alpha5</span>
-<span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterConfig</span>
-
-<span class="na">metadata</span><span class="pi">:</span>
-  <span class="na">name</span><span class="pi">:</span> <span class="s">prod</span>
-  <span class="na">region</span><span class="pi">:</span> <span class="s">eu-central-1</span>
-  <span class="na">version</span><span class="pi">:</span> <span class="m">1.14</span>
-
-<span class="na">managedNodeGroups</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">prod</span>
-    <span class="na">instanceType</span><span class="pi">:</span> <span class="s">t3.large</span>
-    <span class="na">desiredCapacity</span><span class="pi">:</span> <span class="m">1</span>
-    <span class="na">availabilityZones</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">eu-central-1a"</span><span class="pi">]</span>
-    <span class="na">minSize</span><span class="pi">:</span> <span class="m">1</span>
-    <span class="na">maxSize</span><span class="pi">:</span> <span class="m">3</span>
-    <span class="na">tags</span><span class="pi">:</span>
-          <span class="na">nodegroup-role</span><span class="pi">:</span> <span class="s">worker</span>
-    <span class="na">labels</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">role</span><span class="pi">:</span> <span class="nv">worker</span><span class="pi">}</span>
-    <span class="na">iam</span><span class="pi">:</span>
-      <span class="na">withAddonPolicies</span><span class="pi">:</span>
-        <span class="na">externalDNS</span><span class="pi">:</span> <span class="no">true</span>
-        <span class="na">certManager</span><span class="pi">:</span> <span class="no">true</span></code></pre></figure>
-
-<p>The config above is similar to the CLI instruction but it also adds new options for customization like specifying <code class="highlighter-rouge">availabilityZones</code>, addons policies and many more, a full list of features can be found at <a href="https://eksctl.io/">eksctl homepage</a>.</p>
-
-<p>The yaml config can be easily applied using: <code class="highlighter-rouge">eksctl create cluster -f cluster.yaml</code>.</p>
-<h2 id="endpost">EndPost</h2>
-<p>Eksctl is a great tool that simplifies cluster creation and even Amazon recommends using it in their <a href="https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html">official documentation</a>.</p>
-
+<p>The deployment process using partition development is best represented by the below flowchart:
+<img src="/assets/images/pd-flowchart.png" alt="Partition development flowchart" />
+Developers commit the source code to a code repository, CI/CD pipeline jobs are then ran to test/build/push the Docker images to a Docker Images Registry service and then a pipeline job that uses <code class="highlighter-rouge">helm</code> or <code class="highlighter-rouge">kubectl</code> to update the Kubernetes deployment images is ran making this a straight forward and easy to understand deployment scenario.</p>
 
         
       </section>
@@ -407,19 +377,19 @@ You can easily create a cluster using <code class="highlighter-rouge">eksctl</co
     
       
       
-      <a href="/tags/#aws" class="page__taxonomy-item" rel="tag">aws</a><span class="sep">, </span>
+      <a href="/tags/#deploy" class="page__taxonomy-item" rel="tag">deploy</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#eksctl" class="page__taxonomy-item" rel="tag">eksctl</a><span class="sep">, </span>
+      <a href="/tags/#environment" class="page__taxonomy-item" rel="tag">environment</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#eks" class="page__taxonomy-item" rel="tag">eks</a><span class="sep">, </span>
+      <a href="/tags/#kubernetes" class="page__taxonomy-item" rel="tag">Kubernetes</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#kubernetes" class="page__taxonomy-item" rel="tag">Kubernetes</a>
+      <a href="/tags/#namespace" class="page__taxonomy-item" rel="tag">namespace</a>
     
     </span>
   </p>
@@ -447,7 +417,7 @@ You can easily create a cluster using <code class="highlighter-rouge">eksctl</co
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-12-26T00:00:00+02:00">December 26, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-01-07T00:00:00+02:00">January 07, 2020</time></p>
         
       </footer>
 
@@ -456,23 +426,22 @@ You can easily create a cluster using <code class="highlighter-rouge">eksctl</co
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Easily+create+an+EKS+cluster+in+AWS+using+eksctl%20https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Feks-cluster-creation-aws%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Deploying+with+Kubernetes+-+Namespace+segregation%20https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Fkubernetes-namespace-segregation%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Feks-cluster-creation-aws%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Fkubernetes-namespace-segregation%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Feks-cluster-creation-aws%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.florianmadar.com%2Fkubernetes%2Fkubernetes-namespace-segregation%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/kubernetes/tail-kubernetes-logs/" class="pagination--pager" title="Various ways to tail Kubernetes pod logs
+      <a href="/kubernetes/eks-cluster-creation-aws/" class="pagination--pager" title="Easily create an EKS cluster in AWS using eksctl
 ">Previous</a>
     
     
-      <a href="/kubernetes/kubernetes-namespace-segregation/" class="pagination--pager" title="Deploying with Kubernetes - Namespace segregation
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -496,7 +465,7 @@ You can easily create a cluster using <code class="highlighter-rouge">eksctl</co
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/kubernetes/kubernetes-namespace-segregation/" rel="permalink">Deploying with Kubernetes - Namespace segregation
+        <a href="/kubernetes/eks-cluster-creation-aws/" rel="permalink">Easily create an EKS cluster in AWS using eksctl
 </a>
       
     </h2>
@@ -506,11 +475,11 @@ You can easily create a cluster using <code class="highlighter-rouge">eksctl</co
 
 
 
-  2 minute read
+  3 minute read
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">In Kubernetes, namespaces are a powerful concept that offers a way to partition a single Kubernetes cluster into multiple virtual clusters or, in our case, m...</p>
+    <p class="archive__item-excerpt" itemprop="description">For me, not a while ago, Kubernetes cluster administration and creation in AWS was synonymous with kops as their cloud build Kubernetes service (EKS) was lac...</p>
   </article>
 </div>
 
